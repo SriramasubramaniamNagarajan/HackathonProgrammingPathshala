@@ -4,7 +4,6 @@ import Home from './components/Home'
 import FindTheService from './components/FindTheService'
 import DisabilityInfo from './components/DisabilityInfo'
 import EssentialDocs from './components/EssentialDocs'
-import RightAndEntitlement from './components/RightAndEntitlement'
 import Resources from './components/Resources'
 import NeedAssistance from './components/NeedAssistance'
 import {Routes, Route} from 'react-router-dom'
@@ -20,8 +19,8 @@ const App = () => {
         <Route path="/disability-info" element={<DisabilityInfo/>} />
         <Route path="/essential-docs" element={<EssentialDocs/>} />
         <Route path="/resources" element={<Resources/>} />
-        <Route path='/RightAndEntitlement' element={<RightAndEntitlement/>} />
       </Routes>
+      <br/>
       <NeedAssistance/>
     </div>
   );
