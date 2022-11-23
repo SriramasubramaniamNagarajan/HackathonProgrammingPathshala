@@ -6,6 +6,7 @@ import DisabilityInfo from './components/DisabilityInfo'
 import EssentialDocs from './components/EssentialDocs'
 import Resources from './components/Resources'
 import NeedAssistance from './components/NeedAssistance'
+import RightAndEntitlement from './components/RightAndEntitlement'
 import {Routes, Route} from 'react-router-dom'
 
 const App = () => {
@@ -19,8 +20,8 @@ const App = () => {
         <Route path="/disability-info" element={<DisabilityInfo/>} />
         <Route path="/essential-docs" element={<EssentialDocs/>} />
         <Route path="/resources" element={<Resources/>} />
+        <Route path="/right-and-entitlement" element={<RightAndEntitlement/>} />
       </Routes>
-      <br/>
       <NeedAssistance/>
     </div>
   );

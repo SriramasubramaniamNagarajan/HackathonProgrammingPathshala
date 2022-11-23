@@ -1,3 +1,5 @@
+import DCPCRLogo from '../Asserts/logo text.png'
+import ChildRights from '../Asserts/DCPCR logo.jpg'
 const Header = () => {
     return(
         <div>
@@ -11,10 +13,12 @@ const Header = () => {
                 </div>
             </div>
             
-            <div className='flex items-center w-100 h-20'>
-                <div className='container flex justify-between'>
-                    <button className='w-25 px-5 py-1 bg-[#474646] rounded text-white flex'>DCPCR</button>
-                    <button className='w-25 px-5 py-1 bg-[#474646] rounded text-white'>Child Rights</button>
+            <div className='flex items-center justify-between'>
+                <div className='h-13 w-13 rounded text-black'>
+                    <img src={DCPCRLogo} alt="DCPCR Logo" />
+                </div>
+                <div className='h-13 w-13 rounded text-black'>
+                    <img src={ChildRights} alt="Child Rights" />
                 </div>
             </div>
 

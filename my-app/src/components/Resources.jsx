@@ -1,18 +1,20 @@
+import {resourceList} from '../Asserts/data.jsx'
+
 const Resources = () => {
     return(
-        <div className="flex flex-col items-center">
+        <div>
             <div>
-                <h1 className="font-bold">Important Resources</h1>
+                <p className="text-lg font-black gap-5">Important Resources</p>
             </div>
+            <br/>
             <div>
-                <ol type="1">
-                    <li>Important notification or circular</li>
-                    <li>Important Handbooks/Guidebook</li>
-                    <li>Article</li>
-                    <li>Publication</li>
-                    <li>List of Resource centers</li>
-                    <li>List of medical centers</li>
-                </ol>
+                <ul class="list-decimal list-inside gap-2">
+                    {resourceList.map( resource => {
+                        return(
+                            <li key={resource.key}>{resource.description}</li>
+                        )
+                    })}
+                </ul>
             </div>
         </div>
     )

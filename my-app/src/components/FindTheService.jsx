@@ -1,5 +1,7 @@
 import React from 'react';
 import Select from 'react-select'
+import {DisabilityHandbook} from '../Asserts/data.jsx'
+
 const AnnualIncome = [
     {
         value : '',
@@ -27,32 +29,6 @@ const AnnualIncome = [
     }
 ]
 
-const schemesAndEntitlements = [
-    {
-        value : '',
-        label : ''
-    },
-    {
-        value : 'EDCATIONAL SCHEMES AND ENTITLEMENTS',
-        label : 'EDUCATIONAL SCHEMES AND ENTITLEMENTS'
-    },
-    {
-        value : 'HEALTHCARE SCHEMES',
-        label : 'HEALTHCARE SCHEMES'
-    },
-    {
-        value : 'SOCIAL SECURITY SCHEMES',
-        label : 'SOCIAL SECURITY SCHEMES'
-    },
-    {
-        value : 'TRAVEL ALLOWANCES AND ENTITLEME',
-        label : 'TRAVEL ALLOWANCES AND ENTITLEME'
-    },
-    {
-        value : 'SKILL DEVELOPMENT & EMPLOYMENT SCHEMES',
-        label : 'SKILL DEVELOPMENT & EMPLOYMENT SCHEMES'
-    }
-]
 
 const Disability = [
     {
@@ -121,9 +97,12 @@ class FindTheService extends React.Component{
                         Any Specific category of scheme and services, you are intrested in? (optional)
                         </span>
                     </label>
-                    <Select value={schemesAndEntitlements.value} 
-                        options={schemesAndEntitlements} 
-                        defaultValue={schemesAndEntitlements[0]} 
+                    <Select value={DisabilityHandbook.map(handbook =>
+                    {return(handbook.Category)})} 
+                        options={DisabilityHandbook.map(handbook =>
+                            {return(handbook.Category)})} 
+                        defaultValue={DisabilityHandbook.map(handbook =>
+                            {return(handbook.Category)})[0]} 
                     />
                     </div>
                     <br/>
